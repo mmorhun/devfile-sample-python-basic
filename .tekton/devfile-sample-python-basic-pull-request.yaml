@@ -158,6 +158,17 @@ spec:
         - name: kind
           value: task
         resolver: bundles
+
+    - name: my-test      
+      taskSpec:
+          steps:
+            - name: run-script
+              image: ubuntu:latest
+              script: |
+                #!/bin/bash
+                echo "======================================"
+                env
+        
     - name: clone-repository
       params:
       - name: url
